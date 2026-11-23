@@ -1,100 +1,116 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-title-ar="سكينة · الدعم" data-title-en="Sakina · Support">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="سكينة: وقفة وذكر. الدعم والأسئلة الشائعة. Sakina: Pause & Remember support." />
-  <title>سكينة · الدعم | Sakina · Support</title>
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#0B1026" />
+  <meta name="description" content="سكينة: وقفة وذكر — الدعم والأسئلة الشائعة. Sakina: Pause & Remember — support and FAQ." />
+  <title>سكينة · الدعم</title>
   <link rel="icon" href="icon.png" />
+  <link rel="apple-touch-icon" href="icon.png" />
   <link rel="stylesheet" href="style.css" />
+  <script src="lang.js"></script>
 </head>
 <body>
-  <main>
-    <header>
-      <img src="icon.png" alt="" />
-      <h1>سكينة · Sakina</h1>
-      <p>وقفة وذكر · Pause &amp; Remember</p>
-      <nav>
-        <a href="index.html" aria-current="page">الدعم · Support</a>
-        <a href="privacy.html">الخصوصية · Privacy</a>
-        <button type="button" onclick="document.body.classList.toggle('en')">English / العربية</button>
-      </nav>
-    </header>
+  <div class="page" lang="ar" dir="rtl">
+    <main>
+      <header>
+        <img src="icon.png" alt="" />
+        <h1>سكينة</h1>
+        <p>وقفة وذكر</p>
+        <nav>
+          <a data-page="index.html" href="index.html?lang=ar" aria-current="page">الدعم</a>
+          <a data-page="privacy.html" href="privacy.html?lang=ar">الخصوصية</a>
+          <a class="lang" data-page="index.html" href="index.html?lang=en" lang="en">English</a>
+        </nav>
+      </header>
 
-    <section lang="ar">
       <h2>تواصل معنا</h2>
-      <div class="card">
-        <p><strong>من داخل التطبيق:</strong> الإعدادات ← «أرسل ملاحظاتك». تصلنا رسالتك مع رقم الإصدار وسجل تقني لخطوات الوقفة، دون أسماء تطبيقاتك أو شيء من ذكرك.</p>
-        <p><strong>أو هنا:</strong> <a href="https://github.com/MoElnaggar14/sakina-support/issues/new">اكتب لنا رسالة</a>.</p>
+      <div class="card contact">
+        <p>راسلنا بأي سؤال أو مشكلة أو اقتراح، ونردّ عليك بإذن الله.</p>
+        <a class="mail" href="mailto:moelnaggar14@gmail.com?subject=%D8%B3%D9%83%D9%8A%D9%86%D8%A9">moelnaggar14@gmail.com</a>
+        <p>أو من داخل التطبيق: الإعدادات ← «أرسل ملاحظاتك». تصلنا رسالتك مع رقم الإصدار وسجل تقني لخطوات الوقفة، دون أسماء تطبيقاتك أو شيء من ذكرك.</p>
       </div>
 
       <h2>أسئلة شائعة</h2>
       <div class="card">
-        <p><strong>كيف تعمل الوقفة؟</strong></p>
-        <p>تختار التطبيقات التي تشتّتك. عندما تفتح أحدها تظهر وقفة قصيرة فيها ذكر واحد. «قلتها» تفتح التطبيق دقائق معدودة (تختار مدتها من الإعدادات)، و«ارجع» تعيدك إلى يومك.</p>
+        <h3>كيف تعمل الوقفة؟</h3>
+        <p>تختار التطبيقات التي تشتّتك. عندما تفتح أحدها تظهر وقفة قصيرة فيها ذكر واحد. «قلتها» تفتح التطبيق دقائق معدودة تختار مدتها من الإعدادات، و«ارجع» تعيدك إلى يومك.</p>
       </div>
       <div class="card">
-        <p><strong>لماذا تطلب سكينة إذن «مدة استخدام الجهاز»؟</strong></p>
-        <p>لتظهر الوقفة عند فتح التطبيقات التي اخترتها. الإذن لك وحدك، لا يحتاج حساب عائلة، ولا نرى أسماء تطبيقاتك ولا ما تفعله فيها.</p>
+        <h3>لماذا تطلب سكينة إذن «مدة استخدام الجهاز»؟</h3>
+        <p>لتظهر الوقفة عند فتح التطبيقات التي اخترتها. الإذن لك وحدك ولا يحتاج حساب عائلة، ولا نرى أسماء تطبيقاتك ولا ما تفعله فيها.</p>
       </div>
       <div class="card">
-        <p><strong>الوقفة لا تظهر، أو لا يفتح التطبيق بعد «قلتها»</strong></p>
+        <h3>الوقفة لا تظهر، أو لا يفتح التطبيق بعد «قلتها»</h3>
         <ul>
           <li>تأكد من أن الإذن ما زال مفعّلًا: الإعدادات ← مدة استخدام الجهاز.</li>
           <li>افتح سكينة مرة، فهي تعيد تفعيل الوقفة عند فتحها.</li>
-          <li>إن استمرت المشكلة: الإعدادات ← خيارات متقدمة ← «سجل الوقفة» ← مشاركة السجل، وأرسله لنا.</li>
+          <li>إن استمرت المشكلة: في سكينة، الإعدادات ← خيارات متقدمة ← «سجل الوقفة» ← «مشاركة السجل»، وأرسله لنا.</li>
         </ul>
       </div>
       <div class="card">
-        <p><strong>من أين تأتي الأذكار؟</strong></p>
+        <h3>من أين تأتي الأذكار؟</h3>
         <p>من مكتبة مختارة داخل التطبيق، ولكل ذكر مصدره ظاهر تحته. سكينة لا تكتب نصًا دينيًا ولا تولّده.</p>
       </div>
       <div class="card">
-        <p><strong>كيف أوقف سكينة أو أحذفها؟</strong></p>
-        <p>غيّر التطبيقات المحمية من الإعدادات في سكينة، أو احذف التطبيق: حذفه يزيل الوقفة وكل بياناته من جهازك.</p>
+        <h3>كيف أوقف سكينة أو أحذفها؟</h3>
+        <p>غيّر التطبيقات المحمية من إعدادات سكينة، أو احذف التطبيق: حذفه يزيل الوقفة وكل بياناته من جهازك.</p>
       </div>
-    </section>
 
-    <section lang="en">
+      <footer><a data-page="privacy.html" href="privacy.html?lang=ar">سياسة الخصوصية</a></footer>
+    </main>
+  </div>
+
+  <div class="page" lang="en" dir="ltr">
+    <main>
+      <header>
+        <img src="icon.png" alt="" />
+        <h1>Sakina</h1>
+        <p>Pause &amp; Remember</p>
+        <nav>
+          <a data-page="index.html" href="index.html?lang=en" aria-current="page">Support</a>
+          <a data-page="privacy.html" href="privacy.html?lang=en">Privacy</a>
+          <a class="lang" data-page="index.html" href="index.html?lang=ar" lang="ar">العربية</a>
+        </nav>
+      </header>
+
       <h2>Contact us</h2>
-      <div class="card">
-        <p><strong>From the app:</strong> Settings → Send Feedback. Your message comes with the app version and a technical log of the pause steps, without the names of your apps or anything of your remembrance.</p>
-        <p><strong>Or here:</strong> <a href="https://github.com/MoElnaggar14/sakina-support/issues/new">write to us</a>.</p>
+      <div class="card contact">
+        <p>Write to us with any question, problem or suggestion, and we'll get back to you.</p>
+        <a class="mail" href="mailto:moelnaggar14@gmail.com?subject=Sakina">moelnaggar14@gmail.com</a>
+        <p>Or from the app: Settings → Send Feedback. Your message comes with the app version and a technical log of the pause steps, without the names of your apps or anything of your remembrance.</p>
       </div>
 
       <h2>Frequently asked questions</h2>
       <div class="card">
-        <p><strong>How does the pause work?</strong></p>
-        <p>You choose the apps that pull you away. When you open one, a short pause shows a single remembrance. "I said it" opens the app for a few minutes (you pick how long in Settings); "Go back" returns you to your day.</p>
+        <h3>How does the pause work?</h3>
+        <p>You choose the apps that pull you away. When you open one, a short pause shows a single remembrance. "I said it" opens the app for a few minutes (you choose how long in Settings); "Go back" returns you to your day.</p>
       </div>
       <div class="card">
-        <p><strong>Why does Sakina ask for Screen Time permission?</strong></p>
-        <p>So the pause can appear when you open the apps you chose. The permission is for you alone, needs no Family Sharing, and we can't see the names of your apps or what you do in them.</p>
+        <h3>Why does Sakina ask for Screen Time permission?</h3>
+        <p>So the pause can appear when you open the apps you chose. The permission is for you alone and needs no Family Sharing, and we can't see the names of your apps or what you do in them.</p>
       </div>
       <div class="card">
-        <p><strong>The pause doesn't appear, or the app doesn't open after "I said it"</strong></p>
+        <h3>The pause doesn't appear, or the app doesn't open after "I said it"</h3>
         <ul>
           <li>Check that the permission is still on: Settings → Screen Time.</li>
           <li>Open Sakina once; it turns the pause back on when it opens.</li>
-          <li>If it still happens: Settings → Advanced → Pause log → Share log, and send it to us.</li>
+          <li>If it still happens: in Sakina, Settings → Advanced → Pause log → Share log, and send it to us.</li>
         </ul>
       </div>
       <div class="card">
-        <p><strong>Where do the remembrances come from?</strong></p>
+        <h3>Where do the remembrances come from?</h3>
         <p>From a curated library inside the app, with each item's source shown under it. Sakina never writes or generates religious text.</p>
       </div>
       <div class="card">
-        <p><strong>How do I stop or remove Sakina?</strong></p>
+        <h3>How do I stop or remove Sakina?</h3>
         <p>Change your guarded apps in Sakina's Settings, or delete the app: deleting it removes the pause and all of its data from your device.</p>
       </div>
-    </section>
 
-    <footer>
-      <a href="privacy.html">سياسة الخصوصية · Privacy policy</a>
-    </footer>
-  </main>
-  <script>
-    if (!(navigator.language || "").toLowerCase().startsWith("ar")) document.body.classList.add("en");
-  </script>
+      <footer><a data-page="privacy.html" href="privacy.html?lang=en">Privacy policy</a></footer>
+    </main>
+  </div>
 </body>
 </html>

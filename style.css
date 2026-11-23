@@ -1,50 +1,66 @@
 :root {
+  color-scheme: dark;
   --deep: #0B1026;
   --mid: #1B2550;
-  --dusk: #3A2F6B;
   --lantern: #F5B841;
   --calm: #5FD3B3;
   --text: #F7F1E3;
-  --text-2: rgba(247, 241, 227, 0.72);
-  --text-3: rgba(247, 241, 227, 0.48);
+  --text-2: rgba(247, 241, 227, 0.74);
+  --text-3: rgba(247, 241, 227, 0.5);
   --line: rgba(247, 241, 227, 0.12);
+  --card: rgba(247, 241, 227, 0.05);
 }
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
+html, body { margin: 0; padding: 0; background: var(--deep); }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Geeza Pro", "Noto Naskh Arabic", system-ui, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
   background:
-    radial-gradient(70% 45% at 50% 0%, rgba(245, 184, 65, 0.14) 0%, transparent 70%),
+    radial-gradient(70% 40% at 50% 0%, rgba(245, 184, 65, 0.14) 0%, transparent 70%),
     linear-gradient(180deg, var(--deep) 0%, var(--mid) 100%);
   background-attachment: fixed;
   color: var(--text);
   min-height: 100vh;
-  line-height: 1.75;
+  line-height: 1.7;
+  -webkit-text-size-adjust: 100%;
 }
-main { max-width: 680px; margin: 0 auto; padding: 3rem 1.25rem 5rem; }
-header { text-align: center; margin-bottom: 2.5rem; }
-header img { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 0 60px rgba(245, 184, 65, 0.25); }
-header h1 { font-size: 1.9rem; margin: 1rem 0 0.25rem; letter-spacing: -0.01em; }
+[lang="ar"] { font-family: "SF Arabic", "Geeza Pro", "Noto Naskh Arabic", -apple-system, system-ui, sans-serif; line-height: 1.9; }
+
+/* One page per language; the script shows the chosen one. Without script, Arabic shows. */
+.page { display: none; }
+html:not(.en) .page[lang="ar"] { display: block; }
+html.en .page[lang="en"] { display: block; }
+
+main { max-width: 640px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+header { text-align: center; margin-bottom: 2rem; }
+header img { width: 88px; height: 88px; border-radius: 20px; box-shadow: 0 0 56px rgba(245, 184, 65, 0.25); }
+header h1 { font-size: 1.75rem; margin: 0.9rem 0 0.1rem; }
 header p { margin: 0; color: var(--text-2); }
-nav { display: flex; justify-content: center; gap: 0.6rem; flex-wrap: wrap; margin: 1.5rem 0 0; }
-nav a, nav button {
-  font: inherit; font-size: 0.85rem; color: var(--text); background: rgba(247, 241, 227, 0.06);
-  border: 1px solid var(--line); border-radius: 999px; padding: 0.3rem 0.9rem; text-decoration: none; cursor: pointer;
+
+nav { display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; margin-top: 1.25rem; }
+nav a {
+  font-size: 0.9rem; color: var(--text); text-decoration: none;
+  background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 0.35rem 1rem;
 }
 nav a[aria-current="page"] { border-color: var(--lantern); color: var(--lantern); }
-h2 { font-size: 1.2rem; margin: 2.25rem 0 0.6rem; color: var(--text); }
-p, li { color: var(--text-2); }
-ul { padding-inline-start: 1.2rem; }
+nav a.lang { color: var(--text-2); }
+
+h2 { font-size: 1.2rem; margin: 2.25rem 0 0.75rem; }
+h3 { font-size: 1rem; margin: 0 0 0.35rem; color: var(--text); }
+p, li { color: var(--text-2); margin: 0.4rem 0; }
+ul { margin: 0.4rem 0; padding-inline-start: 1.25rem; }
+li::marker { color: var(--lantern); }
 a { color: var(--lantern); text-underline-offset: 3px; }
-.card {
-  background: rgba(247, 241, 227, 0.05); border: 1px solid var(--line); border-radius: 18px; padding: 1.1rem 1.25rem; margin: 1rem 0;
-}
-.card strong { color: var(--text); }
 .meta { color: var(--text-3); font-size: 0.85rem; }
+.lead { color: var(--text); font-weight: 600; font-size: 1.05rem; }
+
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 1rem 1.2rem; margin: 0.75rem 0; }
+.contact { border-color: rgba(245, 184, 65, 0.35); }
+.mail {
+  display: inline-block; margin-top: 0.4rem; padding: 0.55rem 1.2rem; border-radius: 999px;
+  background: var(--lantern); color: var(--deep); font-weight: 600; text-decoration: none;
+  direction: ltr; unicode-bidi: isolate;
+}
 .promise li::marker { color: var(--calm); }
-section[lang="ar"] { direction: rtl; text-align: right; font-size: 1.05rem; }
-section[lang="en"] { display: none; }
-body.en section[lang="ar"] { display: none; }
-body.en section[lang="en"] { display: block; }
-footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--line); color: var(--text-3); font-size: 0.8rem; text-align: center; }
+
+footer { margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--text-3); font-size: 0.85rem; text-align: center; }
 footer a { color: var(--text-2); }
